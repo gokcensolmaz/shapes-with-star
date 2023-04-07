@@ -20,6 +20,8 @@ fun main() {
 
         when (choice) {
             1 -> square(noOfStar)
+            2 -> leftTriangle(noOfStar)
+            3 -> rightTriangle(noOfStar)
             7 -> menu = false
             else -> println("Please enter a number in menu. \n")
         }
@@ -30,6 +32,26 @@ fun main() {
 fun square(noOfStar: Int) {
     for (i in 1..noOfStar) {
         for (j in 1..noOfStar) {
+            print("* ")
+        }
+        println()
+    }
+}
+fun leftTriangle(noOfStar: Int){
+    for (i in 1..noOfStar){
+        for (j in 1..i){
+            print("* ")
+        }
+        println()
+    }
+}
+
+fun rightTriangle(noOfStar: Int){
+    for (i in 1..noOfStar){
+        for (j in noOfStar downTo i){
+            print("  ")
+        }
+        for (j in 1..i ){
             print("* ")
         }
         println()
